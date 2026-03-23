@@ -1,0 +1,1 @@
+effect give @a[tag=Cavalier,tag=ingame] minecraft:slowness 1 0 true

@@ -1,0 +1,1 @@
+item replace entity @a[tag=Infiltrator] hotbar.0 with minecraft:stone_axe

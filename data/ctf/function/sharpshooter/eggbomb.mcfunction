@@ -1,0 +1,1 @@
+execute as @a at @e[type=minecraft:egg] run tp @s ~ ~ ~ ~ ~

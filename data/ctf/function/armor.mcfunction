@@ -1,0 +1,10 @@
+item replace entity @a[team=Red,tag=!invs] armor.chest with minecraft:leather_chestplate[dyed_color=16713732]
+item replace entity @a[team=Red,tag=!invs] armor.head with minecraft:leather_helmet[dyed_color=16713732]
+item replace entity @a[team=Blue,tag=!invs] armor.chest with minecraft:leather_chestplate[dyed_color=1451519]
+item replace entity @a[team=Blue,tag=!invs] armor.head with minecraft:leather_helmet[dyed_color=1451519]
+item replace entity @a[team=!Red,team=!Blue] armor.chest with minecraft:air
+item replace entity @a[team=!Red,team=!Blue] armor.head with minecraft:air
+item replace entity @a[team=!Blue,team=!Red] armor.chest with minecraft:air
+item replace entity @a[team=!Blue,team=!Red] armor.head with minecraft:air
+item replace entity @a[tag=invs] armor.chest with minecraft:air
+item replace entity @a[tag=invs] armor.head with minecraft:air
