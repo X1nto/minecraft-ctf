@@ -1,7 +1,7 @@
 execute as @a[team=Blue] at @a[team=Blue] run tag @e[type=snowball,limit=1,sort=nearest,tag=!Blue,tag=!Red,distance=..2] add Blue
 execute as @a[team=Red] at @a[team=Red] run tag @e[type=snowball,limit=1,sort=nearest,tag=!Blue,tag=!Red,distance=..2] add Red
-execute as @e[type=snowball,tag=Blue] at @e[type=snowball,tag=Blue] unless blocks ~1 ~1 ~1 ~-1 ~-1 ~-1 -115 250 130 all run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,PersistenceRequired:1b,NoBasePlate:1b,NoGravity:1b,Small:1b,CustomName:"BlueSmoky"}
-execute as @e[type=snowball,tag=Red] at @e[type=snowball,tag=Red] unless blocks ~1 ~1 ~1 ~-1 ~-1 ~-1 -115 250 130 all run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,PersistenceRequired:1b,NoBasePlate:1b,NoGravity:1b,Small:1b,CustomName:"RedSmoky"}
+execute as @e[type=snowball,tag=Blue] at @e[type=snowball,tag=Blue] unless blocks ~1 ~1 ~1 ~-1 ~-1 ~-1 -115 250 130 all run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,CustomName:"BlueSmoky"}
+execute as @e[type=snowball,tag=Red] at @e[type=snowball,tag=Red] unless blocks ~1 ~1 ~1 ~-1 ~-1 ~-1 -115 250 130 all run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,CustomName:"RedSmoky"}
 execute at @e[type=armor_stand,name="BlueSmoky"] as @e[type=armor_stand,name="BlueSmoky"] run kill @e[type=snowball,distance=..1,tag=Blue]
 execute at @e[type=armor_stand,name="RedSmoky"] as @e[type=armor_stand,name="RedSmoky"] run kill @e[type=snowball,distance=..1,tag=Red]
 scoreboard players add @e[type=armor_stand,name="BlueSmoky"] smktm 1
