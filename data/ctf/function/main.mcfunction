@@ -8,27 +8,27 @@ execute at @a[tag=Blue,limit=1] run spawnpoint @a[team=Blue] ~ ~ ~
 execute at @a[tag=Red,limit=1] run spawnpoint @a[team=Red] ~ ~ ~
 kill @e[type=item]
 
-function datapack:respawn
-function datapack:flag
-function datapack:healpool
-function datapack:bossbar
-function datapack:armor
+function ctf:respawn
+function ctf:flag
+function ctf:healpool
+function ctf:bossbar
+function ctf:armor
 
-function datapack:sharpshooter/firework
-# function datapack:sharpshooter/eggbomb
-# function datapack:sharpshooter/eggbombcooldown
+function ctf:sharpshooter/firework
+# function ctf:sharpshooter/eggbomb
+# function ctf:sharpshooter/eggbombcooldown
 
-function datapack:support/items
+function ctf:support/items
 
-function datapack:infiltrator/smokecooldown
-function datapack:infiltrator/smoke
-function datapack:infiltrator/axe
-function datapack:infiltrator/invisability
+function ctf:infiltrator/smokecooldown
+function ctf:infiltrator/smoke
+function ctf:infiltrator/axe
+function ctf:infiltrator/invisability
 
-function datapack:cavalier/items
-function datapack:cavalier/effects
+function ctf:cavalier/items
+function ctf:cavalier/effects
 
-execute if entity @e[limit=1,name="startcooldown",type=armor_stand,tag=startedcooldown] run function datapack:startcooldown
+execute if entity @e[limit=1,name="startcooldown",type=armor_stand,tag=startedcooldown] run function ctf:startcooldown
 clear @a[tag=!ingame]
 scoreboard players set @a[tag=!ingame] Death 0
 scoreboard players set @a[tag=!ingame] DamageDealt 0
