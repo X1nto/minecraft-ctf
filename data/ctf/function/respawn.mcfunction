@@ -26,6 +26,6 @@ execute as @a[scores={respawnTime=181}] at @a[scores={respawnTime=181}] run play
 execute as @a[scores={respawnTime=200}] at @a[scores={respawnTime=200}] run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1
 scoreboard players set @a[gamemode=adventure] respawnTime 0
 scoreboard players set @a[gamemode=adventure] Death 0
-execute at @e[type=armor_stand,name=Blue] if entity @e[type=armor_stand,name=start,tag=started] run spawnpoint @a[team=Blue] ~ ~ ~
-execute at @e[type=armor_stand,name=Red] if entity @e[type=armor_stand,name=start,tag=started] run spawnpoint @a[team=Red] ~ ~ ~
+execute at @e[type=armor_stand,name=BlueSpawn] if entity @e[type=armor_stand,name=start,tag=started] run spawnpoint @a[team=Blue] ~ ~ ~
+execute at @e[type=armor_stand,name=RedSpawn] if entity @e[type=armor_stand,name=start,tag=started] run spawnpoint @a[team=Red] ~ ~ ~
 execute at @e[type=armor_stand,name=spawn] if entity @e[type=armor_stand,name=start,tag=!started] run spawnpoint @a ~ ~ ~

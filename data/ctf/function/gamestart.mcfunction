@@ -8,8 +8,8 @@ team join Blue @r[team=!Blue,team=!Red]
 team join Red @r[team=!Blue,team=!Red]
 team join Blue @r[team=!Blue,team=!Red]
 team join Red @r[team=!Blue,team=!Red]
-tp @a[team=Red] @e[name=RedBase,limit=1]
-tp @a[team=Blue] @e[name=BlueBase,limit=1]
+tp @a[team=Red] @e[name=RedPool,limit=1]
+tp @a[team=Blue] @e[name=BluePool,limit=1]
 tag @e[type=armor_stand,name=start] add started
 scoreboard players set bossbar tick 12000
 scoreboard players set sec tick 0
