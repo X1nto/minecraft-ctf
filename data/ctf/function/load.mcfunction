@@ -40,3 +40,4 @@ scoreboard objectives add knockbackCD dummy
 bossbar add minecraft:1 "cock"
 bossbar set minecraft:1 max 12000
 bossbar set minecraft:1 style notched_10
+bossbar set minecraft:1 color green
