@@ -7,5 +7,7 @@ team join nopvp @a
 tag @a[tag=ingame] remove ingame
 tag @a[tag=invs] remove invs
 tag @a[tag=incd] remove incd
+tag @a[tag=hasBlueFlag] remove hasBlueFlag
+tag @a[tag=hasRedFlag] remove hasRedFlag
 effect clear @a
 bossbar set minecraft:1 visible false
