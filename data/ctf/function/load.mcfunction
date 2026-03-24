@@ -25,7 +25,7 @@ scoreboard objectives add eggbombStat minecraft.used:minecraft.egg
 scoreboard objectives add eggbombTimer dummy
 scoreboard objectives add startcooldown dummy
 scoreboard players set sample startcooldown 30
-scoreboard objectives add healStat minecraft.used:minecraft.splash_potion
+scoreboard objectives add healStat minecraft.used:minecraft.lingering_potion
 scoreboard objectives add healTimer dummy
 scoreboard objectives add speedStat minecraft.used:minecraft.splash_potion
 scoreboard objectives add speedTimer dummy
