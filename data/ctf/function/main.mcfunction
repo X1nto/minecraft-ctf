@@ -29,7 +29,6 @@ function ctf:cavalier/items
 function ctf:cavalier/effects
 
 execute if entity @e[limit=1,name="startcooldown",type=armor_stand,tag=startedcooldown] run function ctf:startcooldown
-clear @a[tag=!ingame]
 scoreboard players set @a[tag=!ingame] Death 0
 scoreboard players set @a[tag=!ingame] DamageDealt 0
 scoreboard players set @a[tag=!ingame] eggbombTimer 0

@@ -11,3 +11,5 @@ tag @a[tag=hasBlueFlag] remove hasBlueFlag
 tag @a[tag=hasRedFlag] remove hasRedFlag
 effect clear @a
 bossbar set minecraft:1 visible false
+clear @a
+gamemode adventure @a

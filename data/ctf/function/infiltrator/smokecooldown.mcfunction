@@ -24,7 +24,5 @@ scoreboard players set @a[scores={smokeStat=1..,smokeTimer=400..},tag=Infiltrato
 scoreboard players set @a[scores={smokeStat=0},tag=Infiltrator] smokeTimer 0
 scoreboard players set @a[tag=!Infiltrator] smokeStat 0
 scoreboard players set @a[tag=!Infiltrator] smokeTimer 0
-clear @a[tag=!Infiltrator] minecraft:snowball
-clear @a[tag=!ingame] minecraft:snowball
 scoreboard players set @a[tag=!ingame] smokeTimer 0
 scoreboard players set @a[tag=!ingame] smokeStat 0

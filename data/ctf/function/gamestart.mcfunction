@@ -17,3 +17,4 @@ scoreboard players set min tick 10
 scoreboard players set Blue SCOREBOARD 0
 scoreboard players set Red SCOREBOARD 0
 bossbar set minecraft:1 visible true
+clear @a
