@@ -1,18 +1,18 @@
 gamemode spectator @a[scores={Death=1..}]
 scoreboard players add @a[scores={Death=1..}] respawnTime 1
 gamemode adventure @a[scores={respawnTime=200..}]
-execute if entity @e[type=armor_stand,name=start,tag=started] run tp @a[team=Red,scores={respawnTime=190..200}] @e[type=armor_stand,name=Red,limit=1]
-execute if entity @e[type=armor_stand,name=start,tag=started] run tp @a[team=Blue,scores={respawnTime=190..200}] @e[type=armor_stand,name=Blue,limit=1]
-title @a[scores={respawnTime=1..20}] title {"text":"10","color":"green"}
-title @a[scores={respawnTime=20..40}] title {"text":"9","color":"green"}
-title @a[scores={respawnTime=40..60}] title {"text":"8","color":"green"}
-title @a[scores={respawnTime=60..80}] title {"text":"7","color":"green"}
-title @a[scores={respawnTime=80..100}] title {"text":"6","color":"green"}
-title @a[scores={respawnTime=100..120}] title {"text":"5","color":"green"}
-title @a[scores={respawnTime=120..140}] title {"text":"4","color":"green"}
-title @a[scores={respawnTime=140..160}] title {"text":"3","color":"green"}
-title @a[scores={respawnTime=160..180}] title {"text":"2","color":"green"}
-title @a[scores={respawnTime=180..200}] title {"text":"1","color":"green"}
+execute if entity @e[type=armor_stand,name=start,tag=started] run tp @a[team=Red,scores={respawnTime=200..}] @e[type=armor_stand,name=RedSpawn,limit=1]
+execute if entity @e[type=armor_stand,name=start,tag=started] run tp @a[team=Blue,scores={respawnTime=200..}] @e[type=armor_stand,name=BlueSpawn,limit=1]
+title @a[scores={respawnTime=20}] title {"text":"10","color":"green"}
+title @a[scores={respawnTime=40}] title {"text":"9","color":"green"}
+title @a[scores={respawnTime=60}] title {"text":"8","color":"green"}
+title @a[scores={respawnTime=80}] title {"text":"7","color":"green"}
+title @a[scores={respawnTime=100}] title {"text":"6","color":"green"}
+title @a[scores={respawnTime=120}] title {"text":"5","color":"green"}
+title @a[scores={respawnTime=140}] title {"text":"4","color":"green"}
+title @a[scores={respawnTime=160}] title {"text":"3","color":"green"}
+title @a[scores={respawnTime=180}] title {"text":"2","color":"green"}
+title @a[scores={respawnTime=200}] title {"text":"1","color":"green"}
 execute as @a[scores={respawnTime=1}] at @a[scores={respawnTime=1}] run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1
 execute as @a[scores={respawnTime=21}] at @a[scores={respawnTime=21}] run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1
 execute as @a[scores={respawnTime=41}] at @a[scores={respawnTime=41}] run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1
