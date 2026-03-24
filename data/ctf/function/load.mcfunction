@@ -9,7 +9,6 @@ team modify Red friendlyFire false
 team modify nopvp friendlyFire false
 scoreboard objectives add respawnTime dummy
 scoreboard objectives add SCOREBOARD dummy
-scoreboard objectives setdisplay sidebar SCOREBOARD
 scoreboard objectives add eggbombStat minecraft.used:minecraft.egg
 scoreboard objectives add eggbombTimer dummy
 team join Blue Blue
