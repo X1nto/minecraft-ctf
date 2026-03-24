@@ -2,3 +2,11 @@ item replace entity @a[tag=Cavalier,tag=ingame] hotbar.0 with minecraft:iron_swo
 item replace entity @a[tag=Cavalier,tag=ingame] weapon.offhand with minecraft:shield
 item replace entity @a[tag=Cavalier,tag=ingame] armor.legs with minecraft:iron_leggings
 item replace entity @a[tag=Cavalier,tag=ingame] armor.feet with minecraft:iron_boots
+item replace entity @a[tag=Cavalier] hotbar.1 with minecraft:air
+item replace entity @a[tag=Cavalier] hotbar.2 with minecraft:air
+item replace entity @a[tag=Cavalier] hotbar.3 with minecraft:air
+item replace entity @a[tag=Cavalier] hotbar.4 with minecraft:air
+item replace entity @a[tag=Cavalier] hotbar.5 with minecraft:air
+item replace entity @a[tag=Cavalier] hotbar.6 with minecraft:air
+item replace entity @a[tag=Cavalier] hotbar.7 with minecraft:air
+item replace entity @a[tag=Cavalier] hotbar.8 with minecraft:air
