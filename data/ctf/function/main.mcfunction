@@ -40,3 +40,4 @@ scoreboard players set @a[tag=!ingame] speedTimer 0
 scoreboard players set @a[tag=!ingame] smokeStat 0
 scoreboard players set @a[tag=!ingame] smokeTimer 0
 scoreboard players set @a[tag=!ingame] respawnTime 0
+scoreboard players set @a[tag=!ingame] fireworkStat 0

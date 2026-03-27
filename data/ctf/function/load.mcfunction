@@ -26,16 +26,26 @@ scoreboard objectives add startcooldown dummy
 scoreboard players set sample startcooldown 30
 scoreboard objectives add healStat minecraft.used:minecraft.lingering_potion
 scoreboard objectives add healTimer dummy
+scoreboard objectives add healTimerSeconds dummy
 scoreboard objectives add speedStat minecraft.used:minecraft.splash_potion
 scoreboard objectives add speedTimer dummy
+scoreboard objectives add speedTimerSeconds dummy
 scoreboard objectives add smokeStat minecraft.used:minecraft.snowball
 scoreboard objectives add smokeTimer dummy
+scoreboard objectives add smokeTimerSeconds dummy
 scoreboard objectives add smktm dummy
 scoreboard objectives add sneak minecraft.custom:sneak_time
 scoreboard objectives add sneakTime dummy
 scoreboard objectives add sneakCD dummy
+scoreboard objectives add fireworkStat dummy
+scoreboard objectives add fireworkTimer dummy
+scoreboard objectives add fireworkTimerSeconds dummy
 scoreboard objectives add DamageDealt minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add knockbackCD dummy
+scoreboard objectives add NUMBERS dummy
+scoreboard players set #ZERO NUMBERS 0 
+scoreboard players set #ONE NUMBERS 1
+scoreboard players set #TWENTY NUMBERS 20
 bossbar add minecraft:1 "cock"
 bossbar set minecraft:1 max 12000
 bossbar set minecraft:1 style notched_10
