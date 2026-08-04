@@ -6,7 +6,7 @@ execute as @a[tag=!titled] run title @s times 0 20 20
 tag @a add titled
 execute at @a[tag=Blue,limit=1] run spawnpoint @a[team=Blue] ~ ~ ~
 execute at @a[tag=Red,limit=1] run spawnpoint @a[team=Red] ~ ~ ~
-kill @e[type=item]
+execute if entity @e[type=armor_stand,name=start,tag=started] run kill @e[type=item]
 
 function ctf:respawn
 function ctf:flag

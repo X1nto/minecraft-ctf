@@ -11,9 +11,9 @@ execute as @a[tag=ingame,tag=Sharpshooter] run item replace entity @s hotbar.1 w
 
 execute as @e[type=arrow] run data merge entity @s {pickup:0b}
 
-item replace entity @a[tag=Sharpshooter] hotbar.3 with minecraft:air
-item replace entity @a[tag=Sharpshooter] hotbar.4 with minecraft:air
-item replace entity @a[tag=Sharpshooter] hotbar.5 with minecraft:air
-item replace entity @a[tag=Sharpshooter] hotbar.6 with minecraft:air
-item replace entity @a[tag=Sharpshooter] hotbar.7 with minecraft:air
-item replace entity @a[tag=Sharpshooter] hotbar.8 with minecraft:air
+item replace entity @a[tag=Sharpshooter,tag=ingame] hotbar.3 with minecraft:air
+item replace entity @a[tag=Sharpshooter,tag=ingame] hotbar.4 with minecraft:air
+item replace entity @a[tag=Sharpshooter,tag=ingame] hotbar.5 with minecraft:air
+item replace entity @a[tag=Sharpshooter,tag=ingame] hotbar.6 with minecraft:air
+item replace entity @a[tag=Sharpshooter,tag=ingame] hotbar.7 with minecraft:air
+item replace entity @a[tag=Sharpshooter,tag=ingame] hotbar.8 with minecraft:air

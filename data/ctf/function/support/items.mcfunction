@@ -25,9 +25,9 @@ effect give @a[team=Red,nbt={active_effects: [{id:"minecraft:unluck"}]}] speed 4
 effect clear @a unluck
 effect clear @a luck
 
-item replace entity @a[tag=Support] hotbar.3 with minecraft:air
-item replace entity @a[tag=Support] hotbar.4 with minecraft:air
-item replace entity @a[tag=Support] hotbar.5 with minecraft:air
-item replace entity @a[tag=Support] hotbar.6 with minecraft:air
-item replace entity @a[tag=Support] hotbar.7 with minecraft:air
-item replace entity @a[tag=Support] hotbar.8 with minecraft:air
+item replace entity @a[tag=Support,tag=ingame] hotbar.3 with minecraft:air
+item replace entity @a[tag=Support,tag=ingame] hotbar.4 with minecraft:air
+item replace entity @a[tag=Support,tag=ingame] hotbar.5 with minecraft:air
+item replace entity @a[tag=Support,tag=ingame] hotbar.6 with minecraft:air
+item replace entity @a[tag=Support,tag=ingame] hotbar.7 with minecraft:air
+item replace entity @a[tag=Support,tag=ingame] hotbar.8 with minecraft:air
