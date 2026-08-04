@@ -5,8 +5,9 @@ execute if score Red SCOREBOARD > Blue SCOREBOARD run title @a title ["",{"text"
 execute if score Blue SCOREBOARD = Red SCOREBOARD run title @a title {"text":"Tie!","color":"green"}
 team join nopvp @a
 tag @a[tag=ingame] remove ingame
-tag @a[tag=invs] remove invs
-tag @a[tag=incd] remove incd
+tag @a[tag=sneakactive] remove sneakactive
+tag @a[tag=sneakcd] remove sneakcd
+tag @a[tag=knockbackcd] remove knockbackcd
 tag @a[tag=hasBlueFlag] remove hasBlueFlag
 tag @a[tag=hasRedFlag] remove hasRedFlag
 effect clear @a

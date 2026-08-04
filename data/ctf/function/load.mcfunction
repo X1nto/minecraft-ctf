@@ -42,9 +42,12 @@ scoreboard objectives add fireworkTimer dummy
 scoreboard objectives add fireworkTimerSeconds dummy
 scoreboard objectives add DamageDealt minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add knockbackCD dummy
+scoreboard objectives add knockbackTime dummy
+scoreboard objectives add cdLvl dummy
 scoreboard objectives add NUMBERS dummy
-scoreboard players set #ZERO NUMBERS 0 
+scoreboard players set #ZERO NUMBERS 0
 scoreboard players set #ONE NUMBERS 1
+scoreboard players set #NINETEEN NUMBERS 19
 scoreboard players set #TWENTY NUMBERS 20
 bossbar add minecraft:1 "cock"
 bossbar set minecraft:1 max 12000

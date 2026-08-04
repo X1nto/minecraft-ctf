@@ -1,18 +1,9 @@
 item replace entity @a[tag=Support,tag=ingame] hotbar.0 with minecraft:wooden_sword
 execute as @a[scores={sneak=0},tag=Support,tag=ingame] run scoreboard players set @s DamageDealt 0
-execute as @a[scores={DamageDealt=1..,sneak=1..},tag=Support,tag=ingame] run tag @s add incd
-scoreboard players add @a[tag=incd,tag=Support] knockbackCD 1
-execute as @a[scores={sneak=1..},tag=Support,tag=ingame,tag=!incd] run item replace entity @s hotbar.0 with minecraft:wooden_sword[enchantments={knockback:2},item_name="Super Wooden Sword"]
+execute as @a[scores={DamageDealt=1..,sneak=1..},tag=Support,tag=ingame] run tag @s add knockbackcd
+function ctf:utility/abilitycooldown {id:knockback, class:Support, duration:0, cooldown:100}
+execute as @a[scores={sneak=1..},tag=Support,tag=ingame,tag=!knockbackcd] run item replace entity @s hotbar.0 with minecraft:wooden_sword[enchantments={knockback:2},item_name="Super Wooden Sword"]
 scoreboard players set @a[scores={sneak=1..},tag=Support,tag=ingame] sneak 0
-tag @a[scores={knockbackCD=100..}] remove incd
-scoreboard players set @a[scores={knockbackCD=100..}] knockbackCD 0
-execute as @a[tag=Support,scores={knockbackCD=100}] run xp set @s 0 levels
-execute as @a[tag=Support,scores={knockbackCD=80}] run xp set @s 1 levels
-execute as @a[tag=Support,scores={knockbackCD=60}] run xp set @s 2 levels
-execute as @a[tag=Support,scores={knockbackCD=40}] run xp set @s 3 levels
-execute as @a[tag=Support,scores={knockbackCD=20}] run xp set @s 4 levels
-execute as @a[tag=Support,tag=incd,scores={knockbackCD=0..19}] run xp set @s 5 levels
-execute as @a[tag=Support,tag=!incd,scores={knockbackCD=0..19}] run xp set @s 0 levels
 
 function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame,team=Blue]", cooldown: 100, id:heal, slot: hotbar.1, item: 'minecraft:lingering_potion[potion_contents={custom_effects:[{id:luck,duration:20}],custom_color:3407616},custom_name={text:"Health potion",italic:false},lore=["Cooldown: 5 seconds"],custom_data={tag:blue_heal}]'}
 function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame,team=Red]", cooldown: 100, id:heal, slot: hotbar.1, item: 'minecraft:lingering_potion[potion_contents={custom_effects:[{id:luck,duration:20}],custom_color:3407616},custom_name={text:"Health potion",italic:false},lore=["Cooldown: 5 seconds"],custom_data={tag:red_heal}]'}
