@@ -1,5 +1,11 @@
 gamemode spectator @a[scores={Death=1..}]
 scoreboard players add @a[scores={Death=1..}] respawnTime 1
+scoreboard players set @a[scores={Death=1..}] sneakCD 0
+scoreboard players set @a[scores={Death=1..}] knockbackCD 0
+scoreboard players set @a[scores={Death=1..}] sneak 0
+scoreboard players set @a[scores={Death=1..}] sneakTime 0
+tag @a[scores={Death=1..}] remove invs
+tag @a[scores={Death=1..}] remove incd
 gamemode adventure @a[scores={respawnTime=200..}]
 execute if entity @e[type=armor_stand,name=start,tag=started] run tp @a[team=Red,scores={respawnTime=200..}] @e[type=armor_stand,name=RedSpawn,limit=1]
 execute if entity @e[type=armor_stand,name=start,tag=started] run tp @a[team=Blue,scores={respawnTime=200..}] @e[type=armor_stand,name=BlueSpawn,limit=1]
