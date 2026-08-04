@@ -14,6 +14,7 @@ scoreboard objectives add eggbombTimer dummy
 team join Blue Blue
 team join Red Red
 gamerule immediate_respawn true
+gamerule keep_inventory true
 gamerule advance_time false
 gamerule mob_griefing false
 time set day
