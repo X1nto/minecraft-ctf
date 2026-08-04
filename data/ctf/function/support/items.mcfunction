@@ -19,7 +19,8 @@ execute as @e[type=armor_stand,name=BlueHeal] at @s run scoreboard players add @
 kill @e[type=armor_stand,name=RedHeal,scores={tick=60..}]
 kill @e[type=armor_stand,name=BlueHeal,scores={tick=60..}] 
 
-function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame]", cooldown: 160, id:speed, slot: hotbar.2, item: 'minecraft:splash_potion[potion_contents={custom_effects:[{id:luck,duration:60}],custom_color:37375},custom_name={text:"Speed potion",italic:false},lore=["Cooldown: 5 seconds"]]'}
+function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame,team=Blue]", cooldown: 160, id:speed, slot: hotbar.2, item: 'minecraft:splash_potion[potion_contents={custom_effects:[{id:luck,duration:60}],custom_color:37375},custom_name={text:"Speed potion",italic:false},lore=["Cooldown: 5 seconds"]]'}
+function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame,team=Red]", cooldown: 160, id:speed, slot: hotbar.2, item: 'minecraft:splash_potion[potion_contents={custom_effects:[{id:unluck,duration:60}],custom_color:37375},custom_name={text:"Speed potion",italic:false},lore=["Cooldown: 5 seconds"]]'}
 effect give @a[team=Blue,nbt={active_effects: [{id:"minecraft:luck"}]}] speed 4 0 false
 effect give @a[team=Red,nbt={active_effects: [{id:"minecraft:unluck"}]}] speed 4 0 false
 effect clear @a unluck
