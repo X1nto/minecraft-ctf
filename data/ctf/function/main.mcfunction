@@ -1,3 +1,10 @@
+scoreboard players set #gameActive NUMBERS 0
+execute if entity @e[type=armor_stand,name=start,tag=started] run scoreboard players set #gameActive NUMBERS 1
+
+execute as @a[scores={Death=1..},tag=!diedreset] run function ctf:utility/resetcooldowns
+tag @a[scores={Death=1..}] add diedreset
+tag @a[scores={Death=0}] remove diedreset
+
 effect give @a minecraft:saturation 1 1 true
 tag @a[team=Blue] add ingame
 tag @a[team=Red] add ingame
@@ -6,38 +13,12 @@ execute as @a[tag=!titled] run title @s times 0 20 20
 tag @a add titled
 execute at @a[tag=Blue,limit=1] run spawnpoint @a[team=Blue] ~ ~ ~
 execute at @a[tag=Red,limit=1] run spawnpoint @a[team=Red] ~ ~ ~
-execute if entity @e[type=armor_stand,name=start,tag=started] run kill @e[type=item]
 
 function ctf:respawn
-function ctf:flag
-function ctf:healpool
-function ctf:bossbar
-function ctf:armor
+execute if score #gameActive NUMBERS matches 1 run function ctf:tick/ingame
 
-function ctf:sharpshooter/firework
-# function ctf:sharpshooter/eggbomb
-# function ctf:sharpshooter/eggbombcooldown
+execute if entity @e[type=armor_stand,name="startcooldown",tag=startedcooldown,limit=1] run function ctf:startcooldown
 
-function ctf:support/items
-
-function ctf:infiltrator/smokecooldown
-function ctf:infiltrator/smoke
-function ctf:infiltrator/axe
-function ctf:infiltrator/invisability
-
-function ctf:cavalier/items
-function ctf:cavalier/effects
-
-execute if entity @e[limit=1,name="startcooldown",type=armor_stand,tag=startedcooldown] run function ctf:startcooldown
-scoreboard players set @a[tag=!ingame] Death 0
-scoreboard players set @a[tag=!ingame] DamageDealt 0
-scoreboard players set @a[tag=!ingame] eggbombTimer 0
-scoreboard players set @a[tag=!ingame] eggbombStat 0
-scoreboard players set @a[tag=!ingame] healStat 0
-scoreboard players set @a[tag=!ingame] healTimer 0
-scoreboard players set @a[tag=!ingame] speedStat 0
-scoreboard players set @a[tag=!ingame] speedTimer 0
-scoreboard players set @a[tag=!ingame] smokeStat 0
-scoreboard players set @a[tag=!ingame] smokeTimer 0
-scoreboard players set @a[tag=!ingame] respawnTime 0
-scoreboard players set @a[tag=!ingame] fireworkStat 0
+execute as @a[tag=!ingame,tag=wasingame] run function ctf:utility/resetstate
+tag @a[tag=!ingame] remove wasingame
+tag @a[tag=ingame] add wasingame

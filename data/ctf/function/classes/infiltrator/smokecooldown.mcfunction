@@ -1,0 +1,1 @@
+function ctf:utility/cooldownableitem {target:"@a[tag=Infiltrator,tag=ingame]",cooldown:400, id:smoke,slot:"hotbar.1",itemid:"minecraft:snowball",item:'minecraft:snowball[minecraft:item_name={"text":"Smoke Bomb","italic":false,"color":"dark_gray","bold":true}]'}
