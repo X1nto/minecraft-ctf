@@ -1,4 +1,4 @@
-scoreboard players set @s respawnSeconds 220
+scoreboard players set @s respawnSeconds 219
 scoreboard players operation @s respawnSeconds -= @s respawnTime
 scoreboard players operation @s respawnSeconds /= #TWENTY NUMBERS
 title @s title {"score":{"name":"@s","objective":"respawnSeconds"},"color":"green"}
