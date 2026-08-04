@@ -14,3 +14,4 @@ bossbar set minecraft:1 visible false
 clear @a
 gamemode adventure @a
 scoreboard objectives setdisplay sidebar
+effect give @a minecraft:instant_health 1 1 true 
