@@ -6,7 +6,7 @@ tag @a[scores={Death=1..}] add diedreset
 tag @a[scores={Death=0}] remove diedreset
 
 execute as @a unless score @s leaveSeen = @s leaveGame run function ctf:utility/onjoin
-scoreboard players operation @a leaveSeen = @a leaveGame
+execute as @a run scoreboard players operation @s leaveSeen = @s leaveGame
 
 effect give @a minecraft:saturation 1 1 true
 tag @a[team=Blue] add ingame
