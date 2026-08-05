@@ -1,5 +1,5 @@
 scoreboard players set #gameActive NUMBERS 0
-execute if entity @e[type=armor_stand,name=start,tag=started] run scoreboard players set #gameActive NUMBERS 1
+execute if entity @e[type=armor_stand,name=lobby,tag=started] run scoreboard players set #gameActive NUMBERS 1
 
 execute as @a[scores={Death=1..},tag=!diedreset] run function ctf:utility/resetcooldowns
 tag @a[scores={Death=1..}] add diedreset

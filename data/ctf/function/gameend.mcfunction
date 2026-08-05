@@ -1,5 +1,5 @@
-tag @e[limit=1,type=armor_stand,name="start"] remove started
-tp @a[tag=ingame] @e[type=armor_stand,name="start",limit=1]
+tag @e[limit=1,type=armor_stand,name="lobby"] remove started
+tp @a[tag=ingame] @e[type=armor_stand,name="lobby",limit=1]
 execute if score Blue SCOREBOARD > Red SCOREBOARD run title @a title ["",{"text":"Blue ","color":"dark_blue"},{"text":"team wins!","color":"green"}]
 execute if score Red SCOREBOARD > Blue SCOREBOARD run title @a title ["",{"text":"Red ","color":"red"},{"text":"team wins!","color":"green"}]
 execute if score Blue SCOREBOARD = Red SCOREBOARD run title @a title {"text":"Tie!","color":"green"}
