@@ -1,8 +1,8 @@
-item replace entity @a[tag=Support,tag=ingame] hotbar.0 with minecraft:wooden_sword
+item replace entity @a[tag=Support,tag=ingame] hotbar.0 with minecraft:wooden_sword[unbreakable={}]
 execute as @a[scores={sneak=0},tag=Support,tag=ingame] run scoreboard players set @s DamageDealt 0
 execute as @a[scores={DamageDealt=1..,sneak=1..},tag=Support,tag=ingame,gamemode=adventure] run tag @s add knockbackcd
 function ctf:utility/abilitycooldown {id:knockback, class:Support, duration:0, cooldown:100}
-execute as @a[scores={sneak=1..},tag=Support,tag=ingame,tag=!knockbackcd,gamemode=adventure] run item replace entity @s hotbar.0 with minecraft:wooden_sword[enchantments={knockback:2},item_name="Super Wooden Sword"]
+execute as @a[scores={sneak=1..},tag=Support,tag=ingame,tag=!knockbackcd,gamemode=adventure] run item replace entity @s hotbar.0 with minecraft:wooden_sword[enchantments={knockback:2},item_name="Super Wooden Sword",unbreakable={}]
 scoreboard players set @a[scores={sneak=1..},tag=Support,tag=ingame] sneak 0
 
 function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame]", cooldown: 100, id:heal, slot: hotbar.1, itemid:"minecraft:lingering_potion", item: 'minecraft:lingering_potion[potion_contents={custom_effects:[{id:luck,duration:20}],custom_color:3407616},custom_name={text:"Health potion",italic:false},lore=["Cooldown: 5 seconds"]]'}

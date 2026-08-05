@@ -3,7 +3,7 @@ function ctf:utility/cooldownableitem {target: "@a[tag=ingame,tag=Sharpshooter,t
 
 execute as @e[type=minecraft:firework_rocket,tag=!counted,nbt={ShotAtAngle:1b}] run function ctf:classes/sharpshooter/countfirework
 
-execute as @a[tag=ingame,tag=Sharpshooter] unless items entity @s weapon.offhand minecraft:crossbow run item replace entity @s weapon.offhand with minecraft:crossbow[enchantments={quick_charge: 1}]
+execute as @a[tag=ingame,tag=Sharpshooter] unless items entity @s weapon.offhand minecraft:crossbow run item replace entity @s weapon.offhand with minecraft:crossbow[enchantments={quick_charge: 1},unbreakable={}]
 execute as @a[tag=ingame,tag=Sharpshooter] run item replace entity @s hotbar.0 with minecraft:tipped_arrow[potion_contents={custom_effects:[{id:blindness,duration:480}],custom_color:3552822},custom_name={text:"Blinding Assault",italic:false}]
 execute as @a[tag=ingame,tag=Sharpshooter] run item replace entity @s hotbar.1 with minecraft:tipped_arrow[potion_contents={custom_effects:[{id:poison,amplifier:0,duration:640}],custom_color:4098356},custom_name={text:"Toxic Shot",italic:false}]
 
