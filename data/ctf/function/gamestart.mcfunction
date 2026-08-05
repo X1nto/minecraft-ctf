@@ -11,4 +11,5 @@ scoreboard players set Red SCOREBOARD 0
 scoreboard objectives setdisplay sidebar SCOREBOARD
 scoreboard objectives setdisplay below_name Health
 bossbar set ctf:timer visible true
+function ctf:utility/startsign {line1:"Game in",line2:"progress",line3:"",color:"red"}
 clear @a

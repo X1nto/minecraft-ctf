@@ -1,1 +1,0 @@
-give @s minecraft:pale_oak_sign[block_entity_data={id:"minecraft:sign",is_waxed:1b,front_text:{messages:[{text:"Start game",color:"green",bold:true,click_event:{action:"run_command",command:"/function ctf:setup/signs/startgame"}},{text:""},{text:""},{text:""}]}}]

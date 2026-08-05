@@ -20,7 +20,7 @@ execute at @a[tag=Red,limit=1] run spawnpoint @a[team=Red] ~ ~ ~
 function ctf:respawn
 execute if score #gameActive NUMBERS matches 1 run function ctf:tick/ingame
 
-execute if entity @e[type=armor_stand,name="startcooldown",tag=startedcooldown,limit=1] run function ctf:startcooldown
+execute if score startcountdown tick matches 1.. run function ctf:startcountdown
 
 execute as @a[tag=!ingame,tag=wasingame] run function ctf:utility/resetstate
 tag @a[tag=!ingame] remove wasingame

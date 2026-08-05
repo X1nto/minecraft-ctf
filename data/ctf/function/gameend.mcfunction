@@ -18,4 +18,5 @@ clear @a
 gamemode adventure @a
 scoreboard objectives setdisplay sidebar
 scoreboard objectives setdisplay below_name
+function ctf:utility/startsign {line1:"",line2:"Start game",line3:"",color:"green"}
 effect give @a minecraft:instant_health 1 1 true 
