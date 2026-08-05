@@ -1,6 +1,6 @@
 execute as @a[tag=Cavalier,tag=ingame] unless items entity @s hotbar.0 minecraft:iron_sword run item replace entity @s hotbar.0 with minecraft:iron_sword[item_name="Shortsword"]
 execute as @a[tag=Cavalier,tag=ingame] unless items entity @s weapon.offhand minecraft:shield run item replace entity @s weapon.offhand with minecraft:shield
-execute as @a[tag=Cavalier,tag=ingame] unless items entity @s armor.legs minecraft:iron_leggings run item replace entity @s armor.legs with minecraft:iron_leggings
+execute as @a[tag=Cavalier,tag=ingame] unless items entity @s armor.legs minecraft:iron_leggings run item replace entity @s armor.legs with minecraft:iron_leggings[attribute_modifiers=[{id:"minecraft:armor.leggings",type:"minecraft:armor",amount:5,operation:"add_value",slot:"legs"},{id:"ctf:cavalier_health",type:"minecraft:max_health",amount:10,operation:"add_value",slot:"legs"}]]
 execute as @a[tag=Cavalier,tag=ingame] unless items entity @s armor.feet minecraft:iron_boots run item replace entity @s armor.feet with minecraft:iron_boots
 execute as @a[tag=Cavalier,tag=ingame] if items entity @s hotbar.1 * run item replace entity @s hotbar.1 with minecraft:air
 execute as @a[tag=Cavalier,tag=ingame] if items entity @s hotbar.2 * run item replace entity @s hotbar.2 with minecraft:air

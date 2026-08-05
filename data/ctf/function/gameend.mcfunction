@@ -8,6 +8,7 @@ tag @a[tag=ingame] remove ingame
 tag @a[tag=invisactive] remove invisactive
 tag @a[tag=inviscd] remove inviscd
 tag @a[tag=knockbackcd] remove knockbackcd
+tag @a[tag=overhealcd] remove overhealcd
 tag @a[tag=hasBlueFlag] remove hasBlueFlag
 tag @a[tag=hasRedFlag] remove hasRedFlag
 function ctf:flag

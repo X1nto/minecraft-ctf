@@ -15,3 +15,6 @@ scoreboard players set @s invisCD 0
 tag @s remove knockbackcd
 scoreboard players set @s knockbackTime 0
 scoreboard players set @s knockbackCD 0
+tag @s remove overhealcd
+scoreboard players set @s overhealTime 0
+scoreboard players set @s overhealCD 0

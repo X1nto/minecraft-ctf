@@ -40,6 +40,8 @@ scoreboard objectives add fireworkTimer dummy
 scoreboard objectives add DamageDealt minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add knockbackCD dummy
 scoreboard objectives add knockbackTime dummy
+scoreboard objectives add overhealCD dummy
+scoreboard objectives add overhealTime dummy
 scoreboard objectives add cdLvl dummy
 scoreboard objectives add NUMBERS dummy
 scoreboard players set #ZERO NUMBERS 0
