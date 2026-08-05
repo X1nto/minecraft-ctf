@@ -1,6 +1,7 @@
+execute unless entity @e[type=armor_stand,name="BluePool",tag=active] run return run tellraw @a {"text":"Map not selected","color":"red"}
 function ctf:gamestart/balance
-tp @a[team=Red] @e[type=armor_stand,name=RedPool,limit=1]
-tp @a[team=Blue] @e[type=armor_stand,name=BluePool,limit=1]
+tp @a[team=Red] @e[type=armor_stand,name=RedPool,tag=active,limit=1]
+tp @a[team=Blue] @e[type=armor_stand,name=BluePool,tag=active,limit=1]
 tag @e[type=armor_stand,name=start] add started
 scoreboard players set bossbar tick 12000
 scoreboard players set sec tick 0

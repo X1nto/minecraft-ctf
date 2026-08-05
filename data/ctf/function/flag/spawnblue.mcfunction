@@ -1,0 +1,2 @@
+summon item_display ~ ~ ~ {Tags:["ctfflag","blueflag"],CustomName:"BlueFlag",item:{id:"minecraft:blue_banner",count:1},item_display:"head",transformation:{translation:[0f,0.5f,0f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+data modify entity @e[type=item_display,tag=blueflag,limit=1] Rotation[0] set from entity @e[type=armor_stand,name=BlueSpawn,tag=active,limit=1] Rotation[0]
