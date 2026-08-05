@@ -1,4 +1,6 @@
 scoreboard objectives add Death deathCount
+scoreboard objectives add Health health
+scoreboard objectives modify Health displayname {"text":"❤","color":"red"}
 scoreboard objectives add leaveGame minecraft.custom:leave_game
 scoreboard objectives add leaveSeen dummy
 team add Blue

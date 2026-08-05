@@ -17,4 +17,5 @@ bossbar set ctf:timer visible false
 clear @a
 gamemode adventure @a
 scoreboard objectives setdisplay sidebar
+scoreboard objectives setdisplay below_name
 effect give @a minecraft:instant_health 1 1 true 

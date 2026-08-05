@@ -9,5 +9,6 @@ scoreboard players set min tick 10
 scoreboard players set Blue SCOREBOARD 0
 scoreboard players set Red SCOREBOARD 0
 scoreboard objectives setdisplay sidebar SCOREBOARD
+scoreboard objectives setdisplay below_name Health
 bossbar set ctf:timer visible true
 clear @a
