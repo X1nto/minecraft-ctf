@@ -8,8 +8,8 @@ function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame]", coo
 execute as @e[type=area_effect_cloud] run function ctf:classes/support/healcloud
 kill @e[type=area_effect_cloud]
 scoreboard players add @e[type=marker,tag=ctfheal] tick 1
-execute at @e[type=marker,tag=healBlue] run effect give @a[nbt=!{active_effects:[{id:"minecraft:regeneration"}]},distance=..4,team=Blue] minecraft:regeneration 1 3 false
-execute at @e[type=marker,tag=healRed] run effect give @a[nbt=!{active_effects:[{id:"minecraft:regeneration"}]},distance=..4,team=Red] minecraft:regeneration 1 3 false
+execute at @e[type=marker,tag=healBlue] run effect give @a[team=Blue,distance=..4,predicate=!ctf:has_regeneration] minecraft:regeneration 1 3 false
+execute at @e[type=marker,tag=healRed] run effect give @a[team=Red,distance=..4,predicate=!ctf:has_regeneration] minecraft:regeneration 1 3 false
 execute at @e[type=marker,tag=healBlue] run particle effect{color:1451519} ~ ~ ~ 2 0 2 1 20 normal @a
 execute at @e[type=marker,tag=healRed] run particle effect{color:16713732} ~ ~ ~ 2 0 2 1 20 normal @a
 kill @e[type=marker,tag=ctfheal,scores={tick=60..}]
