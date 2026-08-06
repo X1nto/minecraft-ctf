@@ -36,7 +36,6 @@ scoreboard objectives add cdSeconds dummy
 scoreboard objectives add smktm dummy
 scoreboard objectives add teamBlue dummy
 scoreboard objectives add teamRed dummy
-scoreboard objectives add sneak minecraft.custom:sneak_time
 scoreboard objectives add invisTime dummy
 scoreboard objectives add invisCD dummy
 scoreboard objectives add fireworkStat dummy
