@@ -16,8 +16,8 @@ kill @e[type=marker,tag=ctfheal,scores={tick=60..}]
 
 function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame,team=Blue]", cooldown: 160, id:speed, slot: hotbar.2, itemid:"minecraft:splash_potion", item: 'minecraft:splash_potion[potion_contents={custom_effects:[{id:luck,duration:60}],custom_color:37375},custom_name={text:"Speed potion",italic:false},lore=["Cooldown: 5 seconds"]]'}
 function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame,team=Red]", cooldown: 160, id:speed, slot: hotbar.2, itemid:"minecraft:splash_potion", item: 'minecraft:splash_potion[potion_contents={custom_effects:[{id:unluck,duration:60}],custom_color:37375},custom_name={text:"Speed potion",italic:false},lore=["Cooldown: 5 seconds"]]'}
-effect give @a[team=Blue,nbt={active_effects: [{id:"minecraft:luck"}]}] speed 4 0 false
-effect give @a[team=Red,nbt={active_effects: [{id:"minecraft:unluck"}]}] speed 4 0 false
+effect give @a[team=Blue,predicate=ctf:has_luck] speed 4 0 false
+effect give @a[team=Red,predicate=ctf:has_unluck] speed 4 0 false
 effect clear @a unluck
 effect clear @a luck
 
