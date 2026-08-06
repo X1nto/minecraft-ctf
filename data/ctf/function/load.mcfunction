@@ -40,7 +40,6 @@ scoreboard objectives add invisTime dummy
 scoreboard objectives add invisCD dummy
 scoreboard objectives add fireworkStat dummy
 scoreboard objectives add fireworkTimer dummy
-scoreboard objectives add DamageDealt minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add knockbackCD dummy
 scoreboard objectives add knockbackTime dummy
 scoreboard objectives add overhealCD dummy

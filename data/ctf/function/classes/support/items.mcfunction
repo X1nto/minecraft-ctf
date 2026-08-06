@@ -1,6 +1,4 @@
 item replace entity @a[tag=Support,tag=ingame] hotbar.0 with minecraft:wooden_sword[unbreakable={}]
-execute as @a[tag=Support,tag=ingame,predicate=!ctf:is_sneaking] run scoreboard players set @s DamageDealt 0
-execute as @a[scores={DamageDealt=1..},tag=Support,tag=ingame,gamemode=adventure,predicate=ctf:is_sneaking] run tag @s add knockbackcd
 function ctf:utility/abilitycooldown {id:knockback, class:Support, duration:0, cooldown:100}
 execute as @a[tag=Support,tag=ingame,tag=!knockbackcd,gamemode=adventure,predicate=ctf:is_sneaking] run item replace entity @s hotbar.0 with minecraft:wooden_sword[enchantments={knockback:2},item_name="Super Wooden Sword",unbreakable={}]
 
