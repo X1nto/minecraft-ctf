@@ -21,7 +21,10 @@ team join Red Red
 gamerule immediate_respawn true
 gamerule keep_inventory true
 gamerule advance_time false
+gamerule advance_weather false
 gamerule mob_griefing false
+gamerule max_snow_accumulation_height 0
+gamerule max_block_modifications 1000000
 time set day
 gamerule natural_health_regeneration false
 scoreboard objectives modify SCOREBOARD displayname ["",{"text":"S","color":"green"},{"text":"c","color":"dark_green"},{"text":"o","color":"green"},{"text":"r","color":"dark_green"},{"text":"e","color":"green"},{"text":"b","color":"dark_green"},{"text":"o","color":"green"},{"text":"a","color":"dark_green"},{"text":"r","color":"green"},{"text":"d","color":"dark_green"}]
