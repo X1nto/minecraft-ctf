@@ -25,7 +25,8 @@ gamerule advance_weather false
 gamerule mob_griefing false
 gamerule max_snow_accumulation_height 0
 gamerule max_block_modifications 1000000
-time set day
+execute unless entity @e[limit=1,type=armor_stand,name=lobby,tag=started] run time set day
+execute unless entity @e[limit=1,type=armor_stand,name=lobby,tag=started] run weather clear
 gamerule natural_health_regeneration false
 scoreboard objectives modify SCOREBOARD displayname ["",{"text":"S","color":"green"},{"text":"c","color":"dark_green"},{"text":"o","color":"green"},{"text":"r","color":"dark_green"},{"text":"e","color":"green"},{"text":"b","color":"dark_green"},{"text":"o","color":"green"},{"text":"a","color":"dark_green"},{"text":"r","color":"green"},{"text":"d","color":"dark_green"}]
 scoreboard objectives add tick dummy
