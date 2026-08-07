@@ -1,0 +1,48 @@
+{
+  "description": "Overcharge",
+  "supported_items": "#minecraft:enchantable/crossbow",
+  "weight": 1,
+  "max_level": 1,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 1
+  },
+  "max_cost": {
+    "base": 1,
+    "per_level_above_first": 1
+  },
+  "anvil_cost": 1,
+  "slots": [
+    "any"
+  ],
+  "effects": {
+    "minecraft:crossbow_charge_time": {
+      "type": "minecraft:add",
+      "value": -1.25
+    },
+    "minecraft:projectile_count": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": 2.0
+        }
+      }
+    ],
+    "minecraft:projectile_spread": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": 10.0
+        }
+      }
+    ],
+    "minecraft:damage": [
+      {
+        "effect": {
+          "type": "minecraft:multiply",
+          "factor": 0.25
+        }
+      }
+    ]
+  }
+}

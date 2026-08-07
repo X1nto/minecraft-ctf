@@ -3,7 +3,12 @@ function ctf:utility/cooldownableitem {target: "@a[tag=ingame,tag=Sharpshooter,t
 
 execute as @e[type=minecraft:firework_rocket,tag=!counted,nbt={ShotAtAngle:1b}] run function ctf:classes/sharpshooter/countfirework
 
+execute as @a[tag=ingame,tag=Sharpshooter,tag=!overchargecd,tag=!overchargeactive,gamemode=adventure,predicate=ctf:is_sneaking] run function ctf:classes/sharpshooter/overcharge
+function ctf:utility/abilitycooldown {id:overcharge, class:Sharpshooter, duration:60, cooldown:400}
+
 execute as @a[tag=ingame,tag=Sharpshooter] unless items entity @s weapon.offhand *[custom_data~{ctf:{id:"sharpshooter_crossbow"}}] run function ctf:utility/regrant {id:"sharpshooter_crossbow",slot:"weapon.offhand",item:'minecraft:crossbow[custom_data={ctf:{id:"sharpshooter_crossbow"}},enchantments={quick_charge: 1},unbreakable={}]',count:1}
+execute as @a[tag=ingame,tag=Sharpshooter,tag=overchargeactive] unless items entity @s weapon.offhand *[custom_data~{ctf:{overcharge:1b}}] run function ctf:utility/regrant {id:"sharpshooter_crossbow",slot:"weapon.offhand",item:'minecraft:crossbow[custom_data={ctf:{id:"sharpshooter_crossbow",overcharge:1b}},enchantments={"ctf:overcharge":1},item_name="Overcharged Crossbow",unbreakable={}]',count:1}
+execute as @a[tag=ingame,tag=Sharpshooter,tag=!overchargeactive] if items entity @s weapon.offhand *[custom_data~{ctf:{overcharge:1b}}] run function ctf:utility/regrant {id:"sharpshooter_crossbow",slot:"weapon.offhand",item:'minecraft:crossbow[custom_data={ctf:{id:"sharpshooter_crossbow"}},enchantments={quick_charge: 1},unbreakable={}]',count:1}
 execute as @a[tag=ingame,tag=Sharpshooter] unless items entity @s hotbar.0 *[custom_data~{ctf:{id:"blinding_arrow"}}] run function ctf:utility/regrant {id:"blinding_arrow",slot:"hotbar.0",item:'minecraft:tipped_arrow[custom_data={ctf:{id:"blinding_arrow"}},potion_contents={custom_effects:[{id:blindness,duration:480}],custom_color:3552822},custom_name={text:"Blinding Assault",italic:false}]',count:1}
 execute as @a[tag=ingame,tag=Sharpshooter] unless items entity @s hotbar.1 *[custom_data~{ctf:{id:"toxic_arrow"}}] run function ctf:utility/regrant {id:"toxic_arrow",slot:"hotbar.1",item:'minecraft:tipped_arrow[custom_data={ctf:{id:"toxic_arrow"}},potion_contents={custom_effects:[{id:poison,amplifier:0,duration:640}],custom_color:4098356},custom_name={text:"Toxic Shot",italic:false}]',count:1}
 

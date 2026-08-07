@@ -18,3 +18,7 @@ scoreboard players set @s knockbackCD 0
 tag @s remove overhealcd
 scoreboard players set @s overhealTime 0
 scoreboard players set @s overhealCD 0
+tag @s remove overchargeactive
+tag @s remove overchargecd
+scoreboard players set @s overchargeTime 0
+scoreboard players set @s overchargeCD 0
