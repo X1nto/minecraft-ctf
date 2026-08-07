@@ -1,4 +1,5 @@
 kill @e[type=item]
+clear @a[tag=ingame] *[!custom_data~{ctf:{}}]
 function ctf:flag
 function ctf:healpool
 function ctf:bossbar
