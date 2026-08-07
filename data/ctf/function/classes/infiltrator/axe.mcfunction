@@ -1,1 +1,1 @@
-execute as @a[tag=Infiltrator,tag=ingame] unless items entity @s hotbar.0 *[custom_data~{ctf:{id:"infiltrator_axe"}}] run function ctf:utility/regrant {id:"infiltrator_axe",slot:"hotbar.0",item:'minecraft:stone_axe[custom_data={ctf:{id:"infiltrator_axe"}},unbreakable={}]'}
+execute as @a[tag=Infiltrator,tag=ingame] unless items entity @s hotbar.0 *[custom_data~{ctf:{id:"infiltrator_axe"}}] run function ctf:utility/regrant {id:"infiltrator_axe",slot:"hotbar.0",item:'minecraft:stone_axe[custom_data={ctf:{id:"infiltrator_axe"}},unbreakable={}]',count:1}

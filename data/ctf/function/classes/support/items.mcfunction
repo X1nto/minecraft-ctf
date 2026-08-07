@@ -1,9 +1,9 @@
-execute as @a[tag=Support,tag=ingame] unless items entity @s hotbar.0 *[custom_data~{ctf:{id:"support_sword"}}] run function ctf:utility/regrant {id:"support_sword",slot:"hotbar.0",item:'minecraft:wooden_sword[custom_data={ctf:{id:"support_sword"}},unbreakable={}]'}
+execute as @a[tag=Support,tag=ingame] unless items entity @s hotbar.0 *[custom_data~{ctf:{id:"support_sword"}}] run function ctf:utility/regrant {id:"support_sword",slot:"hotbar.0",item:'minecraft:wooden_sword[custom_data={ctf:{id:"support_sword"}},unbreakable={}]',count:1}
 function ctf:utility/abilitycooldown {id:knockback, class:Support, duration:0, cooldown:100}
-execute as @a[tag=Support,tag=ingame,tag=!knockbackcd,gamemode=adventure,predicate=ctf:is_sneaking] unless items entity @s hotbar.0 *[custom_data~{ctf:{knockback:1b}}] run function ctf:utility/regrant {id:"support_sword",slot:"hotbar.0",item:'minecraft:wooden_sword[custom_data={ctf:{id:"support_sword",knockback:1b}},enchantments={knockback:2},item_name="Super Wooden Sword",unbreakable={}]'}
-execute as @a[tag=Support,tag=ingame] if items entity @s hotbar.0 *[custom_data~{ctf:{knockback:1b}}] unless entity @s[tag=!knockbackcd,gamemode=adventure,predicate=ctf:is_sneaking] run function ctf:utility/regrant {id:"support_sword",slot:"hotbar.0",item:'minecraft:wooden_sword[custom_data={ctf:{id:"support_sword"}},unbreakable={}]'}
+execute as @a[tag=Support,tag=ingame,tag=!knockbackcd,gamemode=adventure,predicate=ctf:is_sneaking] unless items entity @s hotbar.0 *[custom_data~{ctf:{knockback:1b}}] run function ctf:utility/regrant {id:"support_sword",slot:"hotbar.0",item:'minecraft:wooden_sword[custom_data={ctf:{id:"support_sword",knockback:1b}},enchantments={knockback:2},item_name="Super Wooden Sword",unbreakable={}]',count:1}
+execute as @a[tag=Support,tag=ingame] if items entity @s hotbar.0 *[custom_data~{ctf:{knockback:1b}}] unless entity @s[tag=!knockbackcd,gamemode=adventure,predicate=ctf:is_sneaking] run function ctf:utility/regrant {id:"support_sword",slot:"hotbar.0",item:'minecraft:wooden_sword[custom_data={ctf:{id:"support_sword"}},unbreakable={}]',count:1}
 
-function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame]", cooldown: 100, id:heal, slot: hotbar.1, item: 'minecraft:lingering_potion[custom_data={ctf:{id:"heal"}},potion_contents={custom_effects:[{id:luck,duration:20}],custom_color:3407616},custom_name={text:"Health potion",italic:false},lore=["Cooldown: 5 seconds"]]'}
+function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame]", cooldown: 100, id:heal, slot: hotbar.1, name: '{text:"Health potion",italic:false}', item: 'minecraft:lingering_potion[custom_data={ctf:{id:"heal"}},potion_contents={custom_effects:[{id:luck,duration:20}],custom_color:3407616},custom_name={text:"Health potion",italic:false},lore=["Cooldown: 5 seconds"]]'}
 execute as @e[type=area_effect_cloud] run function ctf:classes/support/healcloud
 kill @e[type=area_effect_cloud]
 scoreboard players add @e[type=marker,tag=ctfheal] tick 1
@@ -13,8 +13,8 @@ execute at @e[type=marker,tag=healBlue] run particle effect{color:1451519} ~ ~ ~
 execute at @e[type=marker,tag=healRed] run particle effect{color:16713732} ~ ~ ~ 2 0 2 1 20 normal @a
 kill @e[type=marker,tag=ctfheal,scores={tick=60..}]
 
-function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame,team=Blue]", cooldown: 160, id:speed, slot: hotbar.2, item: 'minecraft:splash_potion[custom_data={ctf:{id:"speed"}},potion_contents={custom_effects:[{id:luck,duration:60}],custom_color:37375},custom_name={text:"Speed potion",italic:false},lore=["Cooldown: 5 seconds"]]'}
-function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame,team=Red]", cooldown: 160, id:speed, slot: hotbar.2, item: 'minecraft:splash_potion[custom_data={ctf:{id:"speed"}},potion_contents={custom_effects:[{id:unluck,duration:60}],custom_color:37375},custom_name={text:"Speed potion",italic:false},lore=["Cooldown: 5 seconds"]]'}
+function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame,team=Blue]", cooldown: 160, id:speed, slot: hotbar.2, name: '{text:"Speed potion",italic:false}', item: 'minecraft:splash_potion[custom_data={ctf:{id:"speed"}},potion_contents={custom_effects:[{id:luck,duration:60}],custom_color:37375},custom_name={text:"Speed potion",italic:false},lore=["Cooldown: 5 seconds"]]'}
+function ctf:utility/cooldownableitem {target: "@a[tag=Support,tag=ingame,team=Red]", cooldown: 160, id:speed, slot: hotbar.2, name: '{text:"Speed potion",italic:false}', item: 'minecraft:splash_potion[custom_data={ctf:{id:"speed"}},potion_contents={custom_effects:[{id:unluck,duration:60}],custom_color:37375},custom_name={text:"Speed potion",italic:false},lore=["Cooldown: 5 seconds"]]'}
 effect give @a[team=Blue,predicate=ctf:has_luck] speed 4 0 false
 effect give @a[team=Red,predicate=ctf:has_unluck] speed 4 0 false
 effect clear @a unluck
